@@ -1,0 +1,51 @@
+@use '../abstracts/' as *;
+
+.pricing-plans {
+    border: getSize(8) solid getColor(primary, 400); //$size-8 solid $clr-primary-400;
+    display: flex;
+}
+
+.tier {
+    flex: 1;
+    // padding: $size-36; // wird neu als Utilitie-Klasse im HTML gesetzt
+
+    display: grid;
+    gap: getSize(20); //$size-20;
+
+    &__title {
+        text-transform: uppercase;
+        // font-weight: $fw-700; // wird neu als Utilitie-Klasse im HTML gesetzt
+        // color: getColor(primary, 400); //$clr-primary-400; // wird neu als Utilitie-Klasse im HTML gesetzt
+
+        // .inverted & { // wird neu als Utilitie-Klasse im HTML gesetzt
+        //     color: $clr-neutral-100;
+        // }
+    }
+
+    &__feature-list {
+        list-style: none;
+    }
+
+    &__item {
+        
+        &:not(:last-child)::after {
+            content: '';
+            display: block;
+            height: 1px;
+            margin-block: getSize(20); //$size-20;
+            background-color: getColor(neutral, 900); //$clr-neutral-900;
+            opacity: .2;
+        }
+
+    }
+
+    // &__price { // wird neu als Utilitie-Klasse im HTML gesetzt
+    //     font-size: $fs-800;
+    //     font-weight: $fw-700;
+
+    //     span {
+    //         font-weight: $fw-400;
+    //         font-size: $fs-600;
+    //     }
+    // }
+}

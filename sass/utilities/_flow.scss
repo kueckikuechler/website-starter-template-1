@@ -1,0 +1,8 @@
+.flow > *:where(:not(:first-child)) {
+    // border: 1px solid red; // just to show the effect.. should be deleted...
+    margin-top: var(--flow-spacer, 1rem); // die Variable --flow-spacer kann entweder als style-Element direkt im HTML-Element gesetzt werden oder so wie unten als data-Attribut verwendet werden
+}
+
+.flow > [data-spacer = "big"] {  // data-spacer wird als Attribut dem jeweiligen HTML-Element zugewiesen 
+    --flow-spacer: 10rem;
+}

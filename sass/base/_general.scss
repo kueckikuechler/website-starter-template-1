@@ -1,0 +1,11 @@
+@use '../abstracts/' as *;
+
+body {
+    font-family: $ff-base;
+    font-size: getFs(400); //$fs-400;
+    font-weight: $fw-400;
+    color: getColor(neutral, 400); //$clr-neutral-900;
+    // background-color: getColor(neutral, 100); //$clr-neutral-100;
+    // text-align: center;
+    line-height: 1.5;
+}

@@ -1,0 +1,31 @@
+@use 'sass:map';
+@use 'colors' as *;
+@use 'typography' as *;
+@use 'sizes' as *;
+
+// Funktion mit der die Farbe aus der Map _colors.scss geholt wird
+@function getColor($color, $shade) {
+    @if map.has-key($colors, $color, $shade) {
+        @return map.get($colors, $color, $shade);
+    } @else {
+        @error '$colors does not have the $color/$shade #{$color, $shade}';
+    }
+};
+
+// Funktion mit der die Schriftgrösse aus der Map _typography.scss geholt wird
+@function getFs($font-size) {
+    @if map.has-key($font-sizes, $font-size) {
+        @return map.get($font-sizes, $font-size);
+    } @else {
+        @error '$font-sizes does not have the $font-size #{$font-size}';
+    }
+}
+
+// Funktion mit der die Grösse aus der Map _sizes.scss geholt wird
+@function getSize($size) {
+    @if map.has-key($sizes, $size) {
+        @return map.get($sizes, $size);
+    } @else {
+        @error '$sizes does not have the $size #{$size}';
+    }
+}

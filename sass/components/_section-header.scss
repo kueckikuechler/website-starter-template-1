@@ -1,0 +1,39 @@
+@use '../abstracts/' as *;
+
+.section-header {
+
+    margin-block-end: getSize(36) * 2.5;
+
+    &:has(p) {
+        margin-block-end: getSize(36);
+    }
+
+    &:not(:has(p)) {
+        margin-block-end: getSize(36) * 2.5;
+    }
+
+    & h2 {
+        margin-block-end: getSize(16);
+    }
+
+    & p {
+        max-width: 50ch;
+
+        .text-center & {
+            margin-inline: auto;
+        }
+    }
+
+    &[data-decoration="true"]::after {
+        content: '';
+        display: block;
+        width: 10rem;
+        height: 1px;
+        background-color: currentColor;
+        margin-block: getSize(36);
+
+        .text-center & {
+            margin-inline: auto;
+        }
+    }
+}

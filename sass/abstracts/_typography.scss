@@ -1,0 +1,17 @@
+$ff-sans: 'Lato', sans-serif;
+$ff-serif: 'Abril Fatface', serif;
+
+$ff-base: $ff-sans;
+$ff-accent: $ff-serif;
+
+$font-sizes: (
+    300: 1rem,         // 16px
+    400: 1.125rem,     // 18px
+    500: 1.3125rem,    // 21px
+    600: clamp(1.4rem, 0.5rem + 3vw, 1.6875rem),    // 27px
+    800: clamp(1.875rem, 0.5rem + 7vw, 3.75rem),    // 60px
+    900: clamp(2.5rem, 0.5rem + 10vw, 5rem),        // 80px
+);
+
+$fw-400: 400;
+$fw-700: 700;
